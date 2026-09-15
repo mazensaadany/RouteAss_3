@@ -34,6 +34,20 @@ internal class Program
         prices = new double[] { 10.0, 12.5, 15.0 };
     }
 
+    public static bool TryGetPrice(string title, out double price)
+    {
+        if (title == "clean code")
+        {
+            price = 25.5;
+            return true;
+        }
+        else
+        {
+            price = 0.0;
+            return false;
+        }
+    }
+
     static void Main(string[] args)
     {
         #region 1st answer
@@ -104,6 +118,12 @@ internal class Program
         ReplaceArray(ref prices);
         Console.WriteLine(prices.Length);
 
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 9th answer
+        TryGetPrice("clean code", out double price);
+        Console.WriteLine($"price of book is: {price}");
         #endregion
     }
 }
