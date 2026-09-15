@@ -33,6 +33,11 @@ internal class Program
         #endregion
         Console.WriteLine("---------------------------------");
 
+        #region 3rd answer
+        Console.WriteLine(PrintWelcomeMessage());
+        #endregion
+        Console.WriteLine("---------------------------------");
+
         
     }
 }
