@@ -38,7 +38,11 @@ internal class Program
         #endregion
         Console.WriteLine("---------------------------------");
 
-        
+        #region 4th answer
+        PrintBookTitle("clean code");
+        #endregion
+        Console.WriteLine("---------------------------------");
+
     }
 }
 
