@@ -13,6 +13,11 @@ internal class Program
         Console.WriteLine($" book title: {title}");
     }
 
+    public static int AddBonusPages(int pages)
+    {
+        return pages + 50;
+    }
+
     static void Main(string[] args)
     {
         #region 1st answer
@@ -43,6 +48,12 @@ internal class Program
         #endregion
         Console.WriteLine("---------------------------------");
 
+        #region 5th answer
+        Console.WriteLine($"pages number is: {AddBonusPages(400)}");
+        // expected output: pages number is: 450,
+        // bc we called it with parameter 400
+        // and it adds 50 to it
+        #endregion
     }
 }
 
