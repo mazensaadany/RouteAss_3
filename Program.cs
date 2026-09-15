@@ -29,6 +29,11 @@ internal class Program
         return pages;
     }
 
+    public static void ReplaceArray(ref double[] prices)
+    {
+        prices = new double[] { 10.0, 12.5, 15.0 };
+    }
+
     static void Main(string[] args)
     {
         #region 1st answer
@@ -91,6 +96,14 @@ internal class Program
         // expected output: 450,
         //but int pages is passed by reference to the method AddBonusPagesByRef,
         //so the original value of pages is modified to 450.
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 8th answer
+
+        ReplaceArray(ref prices);
+        Console.WriteLine(prices.Length);
+
         #endregion
     }
 }
