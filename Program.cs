@@ -10,7 +10,7 @@ internal class Program
 
     public static void PrintBookTitle(string title)
     {
-        Console.WriteLine($" book title: {title}");
+        Console.WriteLine($"book title: {title}");
     }
 
     public static int AddBonusPages(int pages)
@@ -21,6 +21,12 @@ internal class Program
     public static void ApplyDiscount(double[] prices)
     {
         prices[0] -= 5.0;
+    }
+
+    public static int AddBonusPagesByRef(ref int pages)
+    {
+        pages += 50;
+        return pages;
     }
 
     static void Main(string[] args)
@@ -44,12 +50,16 @@ internal class Program
         Console.WriteLine("---------------------------------");
 
         #region 3rd answer
+
         Console.WriteLine(PrintWelcomeMessage());
+
         #endregion
         Console.WriteLine("---------------------------------");
 
         #region 4th answer
+
         PrintBookTitle("clean code");
+
         #endregion
         Console.WriteLine("---------------------------------");
 
@@ -70,6 +80,17 @@ internal class Program
 
         // expected output: 20.5,
         // because we called ApplyDiscount with the prices array,
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 7th answer
+        int pages = 400;
+        AddBonusPagesByRef(ref pages);
+        Console.WriteLine(pages);
+
+        // expected output: 450,
+        //but int pages is passed by reference to the method AddBonusPagesByRef,
+        //so the original value of pages is modified to 450.
         #endregion
     }
 }
