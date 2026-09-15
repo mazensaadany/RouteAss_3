@@ -48,6 +48,11 @@ internal class Program
         }
     }
 
+    public static void PrintBookInfo(string title, int pages = 300)
+    {
+        Console.WriteLine($"Title: {title}, Pages: {pages}");
+    }
+
     static void Main(string[] args)
     {
         #region 1st answer
@@ -124,6 +129,17 @@ internal class Program
         #region 9th answer
         TryGetPrice("clean code", out double price);
         Console.WriteLine($"price of book is: {price}");
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 10th answer
+        PrintBookInfo("clean code");
+        PrintBookInfo("clean code", 500);
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 11th answer
+        
         #endregion
     }
 }
