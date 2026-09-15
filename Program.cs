@@ -22,9 +22,18 @@ internal class Program
         #endregion
         Console.WriteLine("---------------------------------");
 
+        #region 2nd answer
+        int[,] shelfCopies =
+        {
+        {3,5 },
+        {1,4 },
+        };
+
+        Console.WriteLine(shelfCopies[1, 0]);
+        #endregion
+        Console.WriteLine("---------------------------------");
+
         
-
-
     }
 }
 
