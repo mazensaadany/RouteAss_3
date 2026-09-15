@@ -53,6 +53,14 @@ internal class Program
         Console.WriteLine($"Title: {title}, Pages: {pages}");
     }
 
+    public static void PrintAllTitles(params string[] titles)
+    {
+        foreach (var title in titles)
+        {
+            Console.WriteLine(title);
+        }
+    }
+
     static void Main(string[] args)
     {
         #region 1st answer
@@ -140,6 +148,11 @@ internal class Program
 
         #region 11th answer
         PrintBookInfo(pages: 500, title: "clean code");
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 12th answer,
+        PrintAllTitles("clean code", "refactoring", "design patterns");
         #endregion
     }
 }
