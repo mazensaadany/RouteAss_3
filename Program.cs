@@ -18,6 +18,11 @@ internal class Program
         return pages + 50;
     }
 
+    public static void ApplyDiscount(double[] prices)
+    {
+        prices[0] -= 5.0;
+    }
+
     static void Main(string[] args)
     {
         #region 1st answer
@@ -53,6 +58,18 @@ internal class Program
         // expected output: pages number is: 450,
         // bc we called it with parameter 400
         // and it adds 50 to it
+        #endregion
+        Console.WriteLine("---------------------------------");
+
+        #region 6th answer
+        prices = new double[] { 25.5, 40.0 };
+
+        ApplyDiscount(prices);
+
+        Console.WriteLine(prices[0]);
+
+        // expected output: 20.5,
+        // because we called ApplyDiscount with the prices array,
         #endregion
     }
 }
